@@ -1,0 +1,7 @@
+.transparentBg {
+    background: transparent
+}
+
+.homeBg {
+    background-image: url("../images/pattern.svg")
+}
