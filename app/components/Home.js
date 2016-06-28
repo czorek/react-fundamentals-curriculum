@@ -13,7 +13,7 @@ class Home extends React.Component {
                 <input type="text" className="form-control" placeholder='Location...' />
               </div>
               <div className="form-group">
-                <button className='btn btn-lg btn-submit btn-success' type="submit">Continue</button>
+                <button className='btn btn-lg btn-submit btn-success' type="submit">Get Weather</button>
               </div>
             </form>
           </div>

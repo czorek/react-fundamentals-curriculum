@@ -4,3 +4,17 @@
 	background: #ff6b3a;
 	margin-bottom: 0;
 }
+
+.headerInput {
+	margin-right: 10px;
+}
+
+.headerButton {
+	margin-right: 15px;
+}
+
+.brand {
+	margin-left: 100px;
+	font-size: 36px;
+	color: white;
+}

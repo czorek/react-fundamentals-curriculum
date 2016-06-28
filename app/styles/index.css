@@ -15,5 +15,9 @@ body {
 .jumbotron h1 {
 	color: white;
 	font-size: 50px;
-	font-weight: light;
+	font-weight: lighter;
+}
+
+.form-inline {
+	margin-top: 7px;
 }

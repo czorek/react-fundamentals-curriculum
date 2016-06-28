@@ -8,11 +8,13 @@ class Main extends React.Component {
     return (
       <div className='fill-height'>
         <nav className='navbar navbar-default' styleName='header'>
-          <div className='navbar-header'>
-            <Link to='/' className='navbar-brand col-sm-offset-2'>
-              Home
-            </Link>
-          </div>
+          <Link to='/' className='navbar-brand' styleName='brand'>
+            Home
+          </Link>
+          <form className='form-inline pull-right'>
+            <input type="text" className="form-control" placeholder='Location...' styleName='headerInput' />
+            <button className='btn btn-submit btn-success' styleName='headerButton' type="submit">Get Weather</button>
+          </form>
         </nav>
         <div className='fill-height'>
           {this.props.children}
