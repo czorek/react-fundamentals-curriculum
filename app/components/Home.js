@@ -2,14 +2,11 @@ import React from 'react'
 import CSSModules from 'react-css-modules'
 import styles from '../styles/home.css'
 
-console.log(styles)
-
 class Home extends React.Component {
   render() {
     return (
-      <div className='homeContainer' styleName='homeBg'>
-        <div className='col-sm-12 text-center'>
-          <div className="jumbotron col-sm-6 col-sm-offset-3" styleName='transparentBg'>
+      <div styleName='homeBg'>
+          <div className="jumbotron text-center col-sm-6 col-sm-offset-3" styleName='transparentBg'>
             <h1>Enter Your Location</h1>
             <form>
               <div className="form-group">
@@ -20,7 +17,6 @@ class Home extends React.Component {
               </div>
             </form>
           </div>
-        </div>
       </div>
     );
   }
