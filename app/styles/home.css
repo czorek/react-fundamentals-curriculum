@@ -3,5 +3,7 @@
 }
 
 .homeBg {
-    background-image: url("../images/pattern.svg")
+    background-image: url(../images/pattern.svg);
+    width: 100%;
 }
+
