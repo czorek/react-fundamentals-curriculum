@@ -1,6 +1,6 @@
 import React from 'react'
 import { PropTypes } from 'react'
-import ApiHelper from '../utils/ApiHelper.js'
+import helper from '../utils/ApiHelper.js'
 
 function GetCityInput(props) {
   return (
@@ -50,7 +50,7 @@ export default React.createClass({
 
   handleOnSubmitCity(e) {
     e.preventDefault();
-    var weather = ApiHelper.getWeatherInfo(e.target.value)
+    var weather = helper.getWeather(this.state.text)
     console.log(weather)
   },
 
