@@ -12,8 +12,17 @@ class Main extends React.Component {
             Home
           </Link>
           <form className='form-inline pull-right'>
-            <input type="text" className="form-control" placeholder='Location...' styleName='headerInput' />
-            <button className='btn btn-submit btn-success' styleName='headerButton' type="submit">Get Weather</button>
+            <input
+              type="text"
+              className="form-control"
+              styleName='headerInput'
+              placeholder='Location...' />
+            <button
+              className='btn btn-submit btn-success'
+              styleName='headerButton'
+              type="submit">
+                Get Weather
+            </button>
           </form>
         </nav>
         <div className='fill-height'>
