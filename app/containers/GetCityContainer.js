@@ -14,6 +14,10 @@ function GetCityInput(props) {
   )
 }
 
+GetCityInput.PropTypes = {
+  handleUpdate: PropTypes.func.isRequired
+}
+
 function GetCitySubmit(props) {
   return (
     <div className="form-group">
@@ -27,7 +31,6 @@ function GetCitySubmit(props) {
 }
 
 GetCitySubmit.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
   city: PropTypes.string.isRequired
 }
 
