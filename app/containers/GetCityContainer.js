@@ -14,51 +14,50 @@ function GetCityInput(props) {
   )
 }
 
-GetCityInput.propTypes = {
-  handleUpdate: PropTypes.func.isRequired
-}
-
 function GetCitySubmit(props) {
   return (
     <div className="form-group">
       <button
         className='btn btn-lg btn-submit btn-success'
-        type="submit"
-        onClick={props.handleSubmit}>
+        type="submit" >
           Get Weather
-        </button>
+      </button>
     </div>
   )
 }
 
 GetCitySubmit.propTypes = {
-  handleSubmit: PropTypes.func.isRequired
+  handleSubmit: PropTypes.func.isRequired,
+  city: PropTypes.string.isRequired
 }
 
 export default React.createClass({
+  contextTypes: {
+    router: PropTypes.object.isRequired
+  },
+
   getInitialState() {
     return {
-      text: ''
+      city: ''
     }
   },
 
   handleOnUpdateCity(e) {
     this.setState({
-      text: e.target.value
+      city: e.target.value
     })
   },
 
   handleOnSubmitCity(e) {
     e.preventDefault();
-    var weather = helper.getWeather(this.state.text)
-    console.log(weather)
+    this.context.router.push('/forecast/' + this.state.city)
   },
 
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleOnSubmitCity} >
         <GetCityInput handleUpdate={this.handleOnUpdateCity} />
-        <GetCitySubmit handleSubmit={this.handleOnSubmitCity} />
+        <GetCitySubmit city={this.state.city} />
       </form>
     );
   }
