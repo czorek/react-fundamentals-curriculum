@@ -16,11 +16,18 @@ export default React.createClass({
 
   componentDidMount() {
     var city = this.props.routeParams.city
-    helper.getWeather(city).then(function(data) {console.log(data)})
+    helper.getWeather(city)
+      .then(function(data) {
+        this.setState({
+          isLoading: false,
+          forecast: data
+        })
+        console.log(data)
+      }.bind(this))
   },
 
   render() {
     return this.state.isLoading === true ?
-      <div>Loading</div> : <Forecast isLoading={this.state.isLoading} />
+      <div>Loading</div> : <div>{this.state.forecast.city.name}</div>
   }
 })
